@@ -37,7 +37,8 @@ export default React.createClass({
 
   onSubmitForm (event) {
     event.preventDefault()
-
+    this.props.label.update(this.state)
+    this.props.label.editing = false
   },
 
   onDeleteClick (event) {
