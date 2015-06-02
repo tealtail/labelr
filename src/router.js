@@ -7,6 +7,7 @@ import Router from 'ampersand-router'
 import PublicPage from './pages/public'
 import ReposPage from './pages/repos'
 import RepoDetailPage from './pages/repo-detail'
+import MessagePage from './pages/message'
 import Layout from './layout'
 import config from '../config'
 
@@ -29,7 +30,8 @@ export default Router.extend({
     'login': 'login',
     'logout': 'logout',
     'repo/:owner/:name': 'repoDetail',
-    'auth/callback?:query': 'authCallback'
+    'auth/callback?:query': 'authCallback',
+    '*fourohfor': 'fourOhFour'
   },
 
   public () {
@@ -76,6 +78,12 @@ export default Router.extend({
           this.redirectTo('/repos')
         }
       })
+
+      this.renderPage(<MessagePage title='Fetching data from GitHub'/>)
     }
+  },
+
+  fourOhFour () {
+    this.renderPage(<MessagePage title='Page not found'/>)
   }
 })
