@@ -1,4 +1,4 @@
-export default {
+const config = {
   'localhost': {
     clientId: 'bede20be8b0354d17b5a',
     gatekeeperUrl: 'https://cryptic-ravine-3294.herokuapp.com/authenticate'
@@ -8,3 +8,5 @@ export default {
     gatekeeperUrl: 'https://labelr-react-production.herokuapp.com/authenticate'
   }
 }[window.location.hostname]
+
+export default config

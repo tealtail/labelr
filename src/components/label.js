@@ -6,6 +6,10 @@ export default React.createClass({
 
   displayName: 'Label',
 
+  propTypes: {
+    label: React.PropTypes.object.isRequired
+  },
+
   getInitialState () {
     const {name, color} = this.props.label
     return {

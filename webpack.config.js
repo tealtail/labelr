@@ -1,5 +1,5 @@
 require('babel/register')
-var getConfig = require('hjs-webpack');
+var getConfig = require('hjs-webpack')
 var Layout = require('./src/layout')
 var Public = require('./src/pages/public')
 var React = require('react')
@@ -9,7 +9,7 @@ module.exports = getConfig({
   out: 'public',
   isDev: process.env.NODE_ENV !== 'production',
   html: function (context) {
-    var layoutHtml = React.renderToString(React.createElement(Layout, {me:{}}))
+    var layoutHtml = React.renderToString(React.createElement(Layout, { me: {} }))
     var publicHtml = React.renderToString(React.createElement(Public))
 
     return {
@@ -17,4 +17,4 @@ module.exports = getConfig({
       'index.html': context.defaultTemplate({html: publicHtml})
     }
   }
-});
+})

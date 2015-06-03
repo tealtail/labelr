@@ -8,7 +8,8 @@
     "pre-build": "rm -rf public && mkdir public",
     "build": "NODE_ENV=production webpack",
     "start": "webpack-dev-server",
-    "yolo": "npm run build && npm run deploy"
+    "yolo": "npm run build && npm run deploy",
+    "test": "standard"
   },
   "author": "Alicia Lauerman <allydevour@me.com>",
   "license": "MIT",
@@ -36,6 +37,7 @@
     "qs": "^2.4.1",
     "react": "^0.13.2",
     "react-hot-loader": "^1.2.5",
+    "standard": "^3.7.3",
     "style-loader": "^0.12.1",
     "stylus-loader": "^1.1.0",
     "surge": "^0.11.1",
@@ -44,5 +46,8 @@
     "webpack-dev-server": "^1.8.2",
     "xhr": "^2.0.1",
     "yeticss": "^6.0.5"
+  },
+  "standard": {
+    "ignore": ["public/*"]
   }
 }

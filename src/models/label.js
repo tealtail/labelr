@@ -3,7 +3,6 @@ import Model from 'ampersand-model'
 import xhr from 'xhr'
 import githubMixin from '../helpers/github-mixin'
 
-
 export default Model.extend(githubMixin, {
   idAttribute: 'name',
 

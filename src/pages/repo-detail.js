@@ -3,9 +3,14 @@ import ampersandMixin from 'ampersand-react-mixin'
 import Label from '../components/label'
 
 export default React.createClass({
-mixins: [ampersandMixin],
+  mixins: [ampersandMixin],
 
   displayName: 'RepoDetailPage',
+
+  propTypes: {
+    repo: React.PropTypes.object.isRequired,
+    labels: React.PropTypes.object.isRequired
+  },
 
   onAddClick () {
     this.props.labels.add({

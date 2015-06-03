@@ -6,6 +6,10 @@ export default React.createClass({
 
   displayName: 'ReposPage',
 
+  propTypes: {
+    repos: React.PropTypes.object.isRequired
+  },
+
   render () {
     const {repos} = this.props
 
