@@ -23,7 +23,10 @@ export default React.createClass({
           <ul className='list-unstyled list-inline cf'>
             <li>Labelr</li>
             <li><a href='/repos'>Repos</a></li>
-            <li className='pull-right'>{me.login} <a href='/logout'>Logout</a></li>
+            <li className='pull-right'>
+              <img className='avatar avatar-small avatar-rounded' src={me.avatar_url}/> {me.login}
+               <a href='/logout'>Logout</a>
+            </li>
           </ul>
         </nav>
         <div className='container'>
