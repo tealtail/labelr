@@ -24,7 +24,9 @@ export default React.createClass({
             <li>Labelr</li>
             <li><a href='/repos'>Repos</a></li>
             <li className='pull-right'>
-              <img className='avatar avatar-small avatar-rounded' src={me.avatar_url}/> {me.login}
+              <div className='user'>
+                <img className='avatar avatar-small avatar-rounded' src={me.avatar_url}/> {me.login}
+              </div>
                <a href='/logout'>Logout</a>
             </li>
           </ul>
